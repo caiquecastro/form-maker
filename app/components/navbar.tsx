@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 export function Navbar() {
   return (
     <header aria-label="Site Header" className="bg-white">
-      <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-screen-2xl items-center gap-8 px-4 sm:px-6 lg:px-8 mb-4">
         <Link className="block text-teal-600" to="/">
           <span className="sr-only">Home</span>
           <svg

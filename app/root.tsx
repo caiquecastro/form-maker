@@ -29,7 +29,9 @@ export default function App() {
       </head>
       <body>
         <Navbar />
-        <Outlet />
+        <div className="max-w-screen-2xl mx-auto px-8">
+          <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
