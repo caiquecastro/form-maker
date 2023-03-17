@@ -1,4 +1,5 @@
-import { ActionArgs, json, redirect } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
+import type { ActionArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/button";
 import { db } from "~/utils/db.server";
