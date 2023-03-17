@@ -13,6 +13,13 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install --production=false
 
+FROM deps as dev
+
+ENV NODE_ENV=development
+
+COPY prisma .
+RUN npx prisma generate
+
 # Setup production node_modules
 FROM base as production-deps
 
