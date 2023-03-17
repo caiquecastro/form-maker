@@ -8,6 +8,10 @@
     "start": "remix-serve build",
     "typecheck": "tsc"
   },
+  "eslintIgnore": [
+    "/build",
+    "/public/build"
+  ],
   "dependencies": {
     "@prisma/client": "^4.11.0",
     "@remix-run/node": "^1.14.0",
