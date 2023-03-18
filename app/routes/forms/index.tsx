@@ -31,8 +31,8 @@ export default function FormsRoute() {
       </div>
       <div>
         {data.forms.map((form) => (
-          <div>
-            {form.id}
+          <div key={form.id}>
+            {form.title} - {form.createdAt}
           </div>
         ))}
       </div>
