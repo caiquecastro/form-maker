@@ -1,6 +1,7 @@
-# Welcome to Remix!
+# Welcome to Form Maker!
 
-- [Remix Docs](https://remix.run/docs)
+This app is a form maker built with [Remix](https://remix.run/docs), [Tailwind](https://tailwindcss.com/),
+[HyperUI](https://www.hyperui.dev/) and [Prisma ORM](https://www.hyperui.dev/).
 
 ## Development
 
