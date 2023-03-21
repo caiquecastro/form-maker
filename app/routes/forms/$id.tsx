@@ -28,7 +28,7 @@ export default function ShowFormRoute() {
             </div>
             <div>
                 {form.questions.map((question) => (
-                    <p>{question.title}</p>
+                    <p key={question.id}>{question.title}</p>
                 ))}
             </div>
         </>
