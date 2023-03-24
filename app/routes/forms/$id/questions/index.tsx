@@ -1,4 +1,4 @@
-import { QuestionType } from "@prisma/client";
+import type { QuestionType } from "@prisma/client";
 import type { ActionArgs } from "@remix-run/node";
 import { redirect } from "react-router";
 import { db } from "~/utils/db.server";
