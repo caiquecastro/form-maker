@@ -26,9 +26,7 @@ export default function NewFormRoute() {
             />
           </div>
 
-          <Button
-            className="rounded-md bg-teal-600 py-2.5 text-sm text-white transition hover:shadow-lg"
-          >
+          <Button>
             Salvar
           </Button>
         </Form>
