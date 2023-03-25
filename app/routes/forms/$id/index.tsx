@@ -2,7 +2,7 @@ import { json } from "@remix-run/node";
 import { Button } from "~/components/button";
 import { db } from "~/utils/db.server";
 import type { LoaderArgs } from "@remix-run/node";
-import { Form, useLoaderData } from "@remix-run/react";
+import { Form, Link, useLoaderData } from "@remix-run/react";
 
 export const loader = async (args: LoaderArgs) => {
   return json({
@@ -24,7 +24,7 @@ export default function ShowFormRoute() {
     <>
       <div className="flex">
         <h1 className="text-3xl mr-auto">Formulário {form.title}</h1>
-        <Button to="/forms">Voltar</Button>
+        <Button as={Link} to="/forms">Voltar</Button>
       </div>
       <div>
         <h2 className="text-2xl">Perguntas</h2>
@@ -67,9 +67,9 @@ export default function ShowFormRoute() {
             </select>
           </div>
 
-          <button className="rounded-md bg-teal-600 py-2.5 text-sm text-white transition hover:shadow-lg">
+          <Button className="rounded-md bg-teal-600 py-2.5 text-sm text-white transition hover:shadow-lg">
             Salvar
-          </button>
+          </Button>
         </Form>
       </div>
     </>
