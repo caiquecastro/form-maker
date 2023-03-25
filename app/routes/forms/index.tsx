@@ -28,7 +28,7 @@ export default function FormsRoute() {
     <>
       <div className="flex">
         <h1 className="text-3xl mr-auto">Formulários</h1>
-        <Button to="/forms/new">Novo Formulário</Button>
+        <Button as={Link} to="/forms/new">Novo Formulário</Button>
       </div>
       <div>
         <div className="overflow-x-auto">
