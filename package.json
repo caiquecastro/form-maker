@@ -5,6 +5,7 @@
     "build": "remix build",
     "dev": "remix dev",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint:prettier": "prettier --check .",
     "start": "remix-serve build",
     "typecheck": "tsc"
   },
