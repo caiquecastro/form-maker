@@ -24,7 +24,9 @@ export default function ShowFormRoute() {
     <>
       <div className="flex">
         <h1 className="text-3xl mr-auto">Formulário {form.title}</h1>
-        <Button as={Link} to="/forms">Voltar</Button>
+        <Button as={Link} to="/forms">
+          Voltar
+        </Button>
       </div>
       <div>
         <h2 className="text-2xl">Perguntas</h2>
@@ -67,9 +69,7 @@ export default function ShowFormRoute() {
             </select>
           </div>
 
-          <Button>
-            Salvar
-          </Button>
+          <Button>Salvar</Button>
         </Form>
       </div>
     </>

@@ -6,7 +6,9 @@ export default function NewFormRoute() {
     <>
       <div className="flex mb-4">
         <h1 className="text-3xl font-semibold mr-auto">Novo Formulário</h1>
-        <Button as={Link} to="/forms">Todos Formulários</Button>
+        <Button as={Link} to="/forms">
+          Todos Formulários
+        </Button>
       </div>
       <div>
         <Form method="post" action="/forms" className="grid grid-cols-6 gap-4">
@@ -26,9 +28,7 @@ export default function NewFormRoute() {
             />
           </div>
 
-          <Button>
-            Salvar
-          </Button>
+          <Button>Salvar</Button>
         </Form>
       </div>
     </>
