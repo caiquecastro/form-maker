@@ -28,7 +28,9 @@ export default function FormsRoute() {
     <>
       <div className="flex">
         <h1 className="text-3xl mr-auto">Formulários</h1>
-        <Button as={Link} to="/forms/new">Novo Formulário</Button>
+        <Button as={Link} to="/forms/new">
+          Novo Formulário
+        </Button>
       </div>
       <div>
         <div className="overflow-x-auto">
@@ -43,9 +45,7 @@ export default function FormsRoute() {
             <Tbody>
               {data.forms.map((form) => (
                 <tr key={form.id}>
-                  <Td highlight>
-                    {form.title}
-                  </Td>
+                  <Td highlight>{form.title}</Td>
                   <Td>{form.createdAt}</Td>
                   <td className="whitespace-nowrap px-4 py-2">
                     <Link
