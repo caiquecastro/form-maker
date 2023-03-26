@@ -1,7 +1,4 @@
-import type {
-  ComponentPropsWithoutRef,
-  ElementType,
-} from "react";
+import type { ComponentPropsWithoutRef, ElementType } from "react";
 
 type ButtonProps<C extends ElementType> = {
   as?: C;
