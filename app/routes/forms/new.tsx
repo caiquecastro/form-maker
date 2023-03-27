@@ -13,7 +13,12 @@ export default function NewFormRoute() {
         </Button>
       </div>
       <div>
-        <Form schema={schema} method="post" action="/forms" className="grid grid-cols-6 gap-4">
+        <Form
+          schema={schema}
+          method="post"
+          action="/forms"
+          className="grid grid-cols-6 gap-4"
+        >
           {({ Field, Errors }) => (
             <>
               <Field name="title" className="col-span-6">
@@ -21,9 +26,7 @@ export default function NewFormRoute() {
                   <>
                     <Label className="block text-xs font-medium text-gray-700" />
 
-                    <Input
-                      className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                    />
+                    <Input className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" />
 
                     <Error className="text-red-700 mt-1 p-1 text-sm" />
                   </>
