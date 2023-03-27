@@ -1,25 +1,29 @@
-import { json, redirect } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import type { ActionArgs } from "@remix-run/node";
+import { makeDomainFunction } from "domain-functions";
 import { Link, useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/button";
-import { db } from "~/utils/db.server";
 import { Table, Tbody, Td, Th } from "~/components/table";
+import { createForm, getForms, schema } from "~/features/Forms";
+import { formAction } from "~/form-action.server";
+
+const mutation = makeDomainFunction(schema)(
+  async (data) => await createForm(data)
+);
 
 export const loader = async () => {
   return json({
-    forms: await db.form.findMany(),
+    forms: await getForms(),
   });
 };
 
-export async function action({ request }: ActionArgs) {
-  const body = await request.formData();
-  const form = await db.form.create({
-    data: {
-      title: body.get("title") as string,
-    },
+export const action = async ({ request }: ActionArgs) =>
+  formAction({
+    request,
+    schema,
+    mutation,
+    successPath: (form) => `/forms/${form.id}`,
   });
-  return redirect(`/forms/${form.id}`);
-}
 
 export default function FormsRoute() {
   const data = useLoaderData<typeof loader>();
