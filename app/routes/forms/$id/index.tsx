@@ -3,6 +3,7 @@ import { Button } from "~/components/button";
 import { db } from "~/utils/db.server";
 import type { LoaderArgs } from "@remix-run/node";
 import { Form, Link, useLoaderData } from "@remix-run/react";
+import { Select } from "~/components/form";
 
 export const loader = async (args: LoaderArgs) => {
   return json({
@@ -56,17 +57,10 @@ export default function ShowFormRoute() {
           </div>
 
           <div className="col-span-6">
-            <label
-              htmlFor="type"
-              className="block text-xs font-medium text-gray-700"
-            >
-              Type
-            </label>
-
-            <select name="type">
-              <option>ALTERNATIVE</option>
-              <option>TEXT</option>
-            </select>
+            <Select name="type" label="Type" id="type">
+              <option value="ALTERNATIVE">Alternativa</option>
+              <option value="TEXT">Texto</option>
+            </Select>
           </div>
 
           <Button>Salvar</Button>
