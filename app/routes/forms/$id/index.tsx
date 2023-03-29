@@ -47,13 +47,13 @@ export default function ShowFormRoute() {
             <>
               <div className="col-span-6">
                 <Field name="title">
-                  {({ Label, Input, Error }) => (
+                  {({ Label, Input, Error: FieldError }) => (
                     <>
                       <Label className="block text-xs font-medium text-gray-700" />
 
                       <Input className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" />
 
-                      <Error />
+                      <FieldError />
                     </>
                   )}
                 </Field>
