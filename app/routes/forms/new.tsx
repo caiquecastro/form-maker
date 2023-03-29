@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import { Button } from "~/components/button";
-import { schema } from "~/features/Forms";
+import { formSchema } from "~/features/Forms";
 import { Form } from "~/form";
 
 export default function NewFormRoute() {
@@ -14,7 +14,7 @@ export default function NewFormRoute() {
       </div>
       <div>
         <Form
-          schema={schema}
+          schema={formSchema}
           method="post"
           action="/forms"
           className="grid grid-cols-6 gap-4"
@@ -22,13 +22,13 @@ export default function NewFormRoute() {
           {({ Field, Errors }) => (
             <>
               <Field name="title" className="col-span-6">
-                {({ Label, Input, Error }) => (
+                {({ Label, Input, Error: FieldError }) => (
                   <>
                     <Label className="block text-xs font-medium text-gray-700" />
 
                     <Input className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" />
 
-                    <Error className="text-red-700 mt-1 p-1 text-sm" />
+                    <FieldError className="text-red-700 mt-1 p-1 text-sm" />
                   </>
                 )}
               </Field>

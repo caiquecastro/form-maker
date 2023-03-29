@@ -4,7 +4,7 @@ import { makeDomainFunction } from "domain-functions";
 import { Link, useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/button";
 import { Table, Tbody, Td, Th } from "~/components/table";
-import { createForm, getForms, schema } from "~/features/Forms";
+import { createForm, getForms, formSchema as schema } from "~/features/Forms";
 import { formAction } from "~/form-action.server";
 
 const mutation = makeDomainFunction(schema)(

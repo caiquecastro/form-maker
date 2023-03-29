@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { db } from "~/utils/db.server";
-import { schema } from "./schema";
+import { formSchema } from "./schema";
 
-type FormIput = z.infer<typeof schema>;
+type FormIput = z.infer<typeof formSchema>;
 
 export function getForms() {
   return db.form.findMany();
