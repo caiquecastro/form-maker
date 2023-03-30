@@ -36,6 +36,8 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 };
 
 export const Input: React.FC<InputProps> = ({
+  id,
+  name,
   label,
   type = "text",
   ...props
@@ -45,6 +47,8 @@ export const Input: React.FC<InputProps> = ({
       {label ? <label>{label}</label> : null}
       <input
         type={type}
+        name={name}
+        id={id ?? name}
         className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
         {...props}
       />
