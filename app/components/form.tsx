@@ -1,4 +1,4 @@
-import { SelectHTMLAttributes } from "react";
+import { InputHTMLAttributes, SelectHTMLAttributes } from "react";
 
 type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
   label?: string;
@@ -28,5 +28,30 @@ export const Select: React.FC<SelectProps> = ({
         {children}
       </select>
     </div>
+  );
+};
+
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+};
+
+export const Input: React.FC<InputProps> = ({
+  id,
+  name,
+  label,
+  type = "text",
+  ...props
+}) => {
+  return (
+    <>
+      {label ? <label>{label}</label> : null}
+      <input
+        type={type}
+        name={name}
+        id={id ?? name}
+        className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+        {...props}
+      />
+    </>
   );
 };
