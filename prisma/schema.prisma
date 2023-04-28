@@ -36,6 +36,7 @@ model Option {
   question   Question @relation(fields: [questionId], references: [id])
   questionId String
   text       String
+  isCorrect  Boolean
 
   @@map("options")
 }
